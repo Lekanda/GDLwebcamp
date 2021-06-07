@@ -217,6 +217,7 @@ textarea {
   }
   div.logo{
     width: 80%;
+    float: left;
   }
   div.logo img{
     width: 100%;
@@ -224,7 +225,6 @@ textarea {
   @media only screen and (min-width:768px){
     div.logo{
       width: 33%;
-      float: left;
     }
   }
   /* Navegacion Principal */
@@ -238,6 +238,10 @@ textarea {
     text-decoration: none;
     color: white;
     transition: all .6s ease;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-bottom:20px ;
   }
   nav.navegacion-principal a:hover{
     background-color: #fe4918;
@@ -258,10 +262,39 @@ textarea {
       display: block;
     }
     nav.navegacion-principal a{
-      margin-right: 10px;
       padding: 10px 10px;
       display: inline-block;
+      width: auto;
+      display: inline-block;
+      text-align: center;
+      margin:0 10px 0 0;
+
     }
+  }
+
+
+  /* Menu Movil */
+  div.menu-movil{
+    width: 60px;
+    display: block;
+    float: right;
+    text-align: right;
+    margin-top: 12px;
+
+  }
+  div.menu-movil:hover{
+    cursor: pointer;
+  }
+  @media (min-width: 768px) { /* Celular */
+    div.menu-movil{
+      display: none;
+    }
+  }
+  div.menu-movil span{
+    height: 8px;
+    margin-bottom: 6px;
+    background-color: white;
+    display: block;
   }
 
 
