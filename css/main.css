@@ -224,6 +224,43 @@ textarea {
   @media only screen and (min-width:768px){
     div.logo{
       width: 33%;
+      float: left;
+    }
+  }
+  /* Navegacion Principal */
+  nav.navegacion-principal{
+    display: none;
+  }
+  nav.navegacion-principal a{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    transition: all .6s ease;
+  }
+  nav.navegacion-principal a:hover{
+    background-color: #fe4918;
+  }
+  nav.navegacion-principal a:last-child{
+    border: 2px solid #fe4918;
+    color: #fe4918;
+  }
+  nav.navegacion-principal a:last-child:hover{
+    border: 2px solid #fe4918;
+    color: white;
+  }
+  @media only screen and (min-width:768px){
+    nav.navegacion-principal{
+      width: 67%;
+      float: right;
+      text-align: right;
+      display: block;
+    }
+    nav.navegacion-principal a{
+      margin-right: 10px;
+      padding: 10px 10px;
+      display: inline-block;
     }
   }
 
