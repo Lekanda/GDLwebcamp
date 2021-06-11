@@ -151,6 +151,31 @@ textarea {
     width: 100px;
     display: block;
   }
+  h3{
+    font-size: 1.8em;
+    font-family: 'PT Sans', sans-serif;
+    color: #fe4918;
+    margin: 0;
+  }
+  .button{
+    background-color: #fe4918;
+    padding: 10px 40px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.4em;
+    margin-top: 20px;
+    display: inline-block;
+    transition: all .3s ease;
+  }
+  .button:hover{
+    background-color: #e33000;
+  }
+  .float-right{
+    float: right;
+  }
 
   /* Header */
   div.hero{
@@ -315,6 +340,8 @@ textarea {
     display: block;
   }
 
+
+
   /* Talleres */
   section.programa{
     position: relative;
@@ -363,7 +390,8 @@ textarea {
     text-decoration: none;
     font-family: 'Oswald', sans-serif;
     margin-bottom: 10px;
-    font-size: 1.2em;
+    font-size: 1.4em;
+    font-weight: 700;
 
   }
   @media only screen and (min-width:768px){
@@ -371,13 +399,26 @@ textarea {
       display: table-cell;
     }
   }
+  div.detalle-evento p i,
   nav.menu-programa a i{
     color: #fe4918;
     font-size: 1.6em;
     margin-right: 10px;
   }
-
-
+  /*Detalle evento*/
+  div.detalle-evento{
+    margin-top: 20px;
+    border-bottom: 1px solid black;
+    padding: 0 20px;
+  }
+  div.detalle-evento:nth-child(2){
+    border: none;
+  }
+  div.detalle-evento p{
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+  }
 
 
 
