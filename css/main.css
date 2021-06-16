@@ -480,6 +480,61 @@ textarea {
     opacity: 0;
   }
 
+
+
+  /* Contador de index */
+  .parallax::before{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+  }
+  div.contador{
+    position: relative;
+    height: auto;
+  }
+  div.contador::before{
+    background-image: url('../img/bg-resumen.jpg');
+    content: '';/*Siempre que se usa ::before o ::afther hay que poner el content*/
+  }
+  ul.resumen-evento{
+    position: relative;
+    padding: 120px 0;
+    
+  }
+  ul.resumen-evento li{
+    width: 50%;
+    float: left;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-family:  'Oswald', sans-serif;
+    font-size: 24px;
+  }
+  @media only screen and (min-width:768px){
+    ul.resumen-evento li{
+      width: 25%;
+      float: left;
+      text-align: center;
+    }
+  }
+  p.numero{
+    color: #fe4918;
+    font-size: 4em;
+    display: block;
+    margin: 0 0 10 0;
+  }
+
+
+
+
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
