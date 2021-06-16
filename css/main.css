@@ -174,6 +174,15 @@ textarea {
     margin-top: 20px;
     display: inline-block;
     transition: all .3s ease;
+    border: 2px solid #fe4918;
+  }
+  .button.hollow{
+    background-color: white !important;
+    color: #fe4918 !important;
+  }
+  .button.hollow:hover{
+    background-color: #ffc3b2 !important;
+
   }
   .button:hover{
     background-color: #e33000;
@@ -550,7 +559,13 @@ textarea {
     border: 1px solid #e1e1e1;
     background-color: #ffffff;
     padding: 40px 0;
-    text-align:center ;
+    text-align:center;
+    transition: all .5s ease;
+  }
+  div.tabla-precio:hover {
+    transform: scale(1.1);
+    border: 1px solid #fe4918;
+    box-shadow: 0px 0px 50px #666;
   }
   div.tabla-precio ul li{
     font-family: 'PT Sans', sans-serif;
@@ -559,6 +574,17 @@ textarea {
     text-transform: uppercase;
     color: #868686;
     line-height: 26px;
+  }
+  div.tabla-precio ul li::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;/* Sin esto no va Font Awesome(Check)*/
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 5px;
+    font-size: 20px;
+    color: green;
+    -webkit-font-smoothing: antialiased;
+    content: '\f00c';
   }
   div.tabla-precio h3 {
     font-family: 'Oswald', sans-serif;
