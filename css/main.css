@@ -493,6 +493,9 @@ textarea {
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
+
+    -webkit-filter: brightness(.8);
+    filter: brightness(.8);
   }
   div.contador{
     position: relative;
@@ -505,7 +508,7 @@ textarea {
   ul.resumen-evento{
     position: relative;
     padding: 120px 0;
-    
+
   }
   ul.resumen-evento li{
     width: 50%;
