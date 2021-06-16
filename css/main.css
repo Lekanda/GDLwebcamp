@@ -499,7 +499,7 @@ textarea {
   }
   div.contador{
     position: relative;
-    height: auto;
+    height: 613px;
   }
   div.contador::before{
     background-image: url('../img/bg-resumen.jpg');
