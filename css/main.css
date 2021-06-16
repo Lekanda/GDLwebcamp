@@ -603,7 +603,10 @@ textarea {
     background-color: green;
   }
 
-  /*TESTIMONIALES*/
+
+
+
+  /*TESTIMONIALES / OPINIONES*/
   div.testimoniales{
     padding-bottom: 20px; ;
   }
@@ -625,10 +628,9 @@ textarea {
   }
   blockquote .txt-blockquote{
     text-align: justify !important;
-    font-size: .8em;
+    font-size: 1em;
     font-family: 'PT Sans', sans-serif;;
     padding: 0 20px 0 65px;
-
   }
   blockquote .txt-blockquote::before{
     content: '\201c';
@@ -640,6 +642,34 @@ textarea {
     padding: 0;
     line-height: 1;
     color: #fe4918;
+  }
+  footer.info-testimonial{
+    padding: 0;
+  }
+  footer.info-testimonial img{
+    float: left;
+    width: 20%;
+    border-radius: 50%;
+    margin-left: 20px;
+
+  }
+  footer.info-testimonial cite {
+    text-align: left;
+    color: #fe4918;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    padding-top: 20px;
+    width: 66.6%;
+    float: right;
+  }
+  footer.info-testimonial cite span{
+    color: #474747;
+    font-size: .9em;
+    display: block;
+    text-transform: none;
+    margin-top: 10px;
   }
 
 
