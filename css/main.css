@@ -676,6 +676,40 @@ textarea {
 
 
 
+  /* NEWSLETTER */
+  div.newsletter{
+    position: relative;
+    height: auto;
+  }
+  div.newsletter::before{
+    background-image: url(../img/bg-newsletter.jpg);
+    content: '';
+  }
+  div.newsletter .contenido{
+    padding: 100px 0;
+    color: white;
+    text-align: center;
+    position: relative;
+  }
+  div.newsletter .contenido p{
+    font-size: 1.2em;
+    text-transform: lowercase;
+  }
+  div.newsletter .contenido h3{
+    color: #fe4918;
+    text-transform: uppercase;
+    font-size: 7vw;
+    font-family: 'PT Sans', sans-serif;
+  }
+  .button.transparente {
+    background-color: transparent;
+    border:2px solid #ffffff;
+  }
+  .button.transparente:hover {
+    border: 2px solid #fe4918;
+    background-color: #fe4918;
+  }
+
 
 
 
