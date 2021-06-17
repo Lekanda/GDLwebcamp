@@ -711,8 +711,25 @@ textarea {
   }
 
 
+  /* CUENTA REGRESIVA */
+  /* div.cuenta-regresiva{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  } */
+  div.cuenta-regresiva ul li{
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  @media only screen and (min-width:768px){
+    div.cuenta-regresiva ul li{
+      width: 25%;
+      float: left;
+    }
+  }
 
-  
 
 
 
