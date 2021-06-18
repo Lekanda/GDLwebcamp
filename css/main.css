@@ -356,7 +356,7 @@ textarea {
 
 
 
-  /* Talleres */
+  /* TALLERES */
   section.programa{
     position: relative;
   }
@@ -435,7 +435,7 @@ textarea {
   }
 
 
-  /*Seccion Nuestros invitados*/
+  /** SECCION NUESTROS INVITADOS **/
   ul.lista-invitados li{
     padding: 10px;
     float: left;
@@ -491,7 +491,7 @@ textarea {
 
 
 
-  /* Contador de index */
+  /* CONTADOR DE INDEX */
   .parallax::before{
     width: 100%;
     height: 100%;
@@ -606,7 +606,7 @@ textarea {
 
 
 
-  /*TESTIMONIALES / OPINIONES*/
+  /** TESTIMONIALES / OPINIONES **/
   div.testimoniales{
     padding-bottom: 20px; ;
   }
@@ -676,7 +676,7 @@ textarea {
 
 
 
-  /* NEWSLETTER */
+  /** NEWSLETTER **/
   div.newsletter{
     position: relative;
     height: auto;
@@ -711,7 +711,7 @@ textarea {
   }
 
 
-  /* CUENTA REGRESIVA */
+  /** CUENTA REGRESIVA **/
   div.cuenta-regresiva ul li{
     text-transform: uppercase;
     font-family: 'Oswald', sans-serif;
@@ -728,8 +728,7 @@ textarea {
 
 
 
-  /** Footer **/
-
+/** FOOTER **/
 footer {
   background-color: #353535;
   padding-top: 40px;
