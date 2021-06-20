@@ -606,125 +606,128 @@ textarea {
 
 
 
-  /** TESTIMONIALES / OPINIONES **/
-  div.testimoniales{
-    padding-bottom: 20px; ;
-  }
+
+
+/** TESTIMONIALES / OPINIONES **/
+div.testimoniales{
+  padding-bottom: 20px; ;
+}
+div.testimonial{
+  padding: 5px;
+}
+@media only screen and (min-width:768px){
   div.testimonial{
-    padding: 5px;
-  }
-  @media only screen and (min-width:768px){
-    div.testimonial{
-      float: left;
-      width: 33.3%;
-    }
-  }
-  blockquote{
-    background-color: #ffffff;
-    border: 1px solid #e1e1e1;
-    position: relative;
-    margin: 0 0 10px 0;
-    padding-bottom: 20px;
-  }
-  blockquote .txt-blockquote{
-    text-align: justify !important;
-    font-size: 1em;
-    font-family: 'PT Sans', sans-serif;;
-    padding: 0 20px 0 65px;
-  }
-  blockquote .txt-blockquote::before{
-    content: '\201c';
-    position: absolute;
-    left: 13px;
-    top: 8px;
-    font-size: 8rem;
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-    color: #fe4918;
-  }
-  footer.info-testimonial{
-    padding: 0;
-    background-color: transparent;
-  }
-  footer.info-testimonial img{
     float: left;
-    width: 20%;
-    border-radius: 50%;
-    margin-left: 20px;
+    width: 33.3%;
+  }
+}
+blockquote{
+  background-color: #ffffff;
+  border: 1px solid #e1e1e1;
+  position: relative;
+  margin: 0 0 10px 0;
+  padding-bottom: 20px;
+}
+blockquote .txt-blockquote{
+  text-align: justify !important;
+  font-size: 1em;
+  font-family: 'PT Sans', sans-serif;;
+  padding: 0 20px 0 65px;
+}
+blockquote .txt-blockquote::before{
+  content: '\201c';
+  position: absolute;
+  left: 13px;
+  top: 8px;
+  font-size: 8rem;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  color: #fe4918;
+}
+footer.info-testimonial{
+  padding: 0;
+  background-color: transparent;
+}
+footer.info-testimonial img{
+  float: left;
+  width: 20%;
+  border-radius: 50%;
+  margin-left: 20px;
 
-  }
-  footer.info-testimonial cite {
-    text-align: left;
-    color: #fe4918;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: bold;
-    font-style: normal;
-    padding-top: 20px;
-    width: 66.6%;
-    float: right;
-  }
-  footer.info-testimonial cite span{
-    color: #474747;
-    font-size: .9em;
-    display: block;
-    text-transform: none;
-    margin-top: 10px;
-  }
-
-
-
-
-
-  /** NEWSLETTER **/
-  div.newsletter{
-    position: relative;
-    height: auto;
-  }
-  div.newsletter::before{
-    background-image: url(../img/bg-newsletter.jpg);
-    content: '';
-  }
-  div.newsletter .contenido{
-    padding: 100px 0;
-    color: white;
-    text-align: center;
-    position: relative;
-  }
-  div.newsletter .contenido p{
-    font-size: 1.2em;
-    text-transform: lowercase;
-  }
-  div.newsletter .contenido h3{
-    color: #fe4918;
-    text-transform: uppercase;
-    font-size: 7vw;
-    font-family: 'PT Sans', sans-serif;
-  }
-  .button.transparente {
-    background-color: transparent;
-    border:2px solid #ffffff;
-  }
-  .button.transparente:hover {
-    border: 2px solid #fe4918;
-    background-color: #fe4918;
-  }
+}
+footer.info-testimonial cite {
+  text-align: left;
+  color: #fe4918;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  padding-top: 20px;
+  width: 66.6%;
+  float: right;
+}
+footer.info-testimonial cite span{
+  color: #474747;
+  font-size: .9em;
+  display: block;
+  text-transform: none;
+  margin-top: 10px;
+}
 
 
-  /** CUENTA REGRESIVA **/
+
+
+
+
+/** NEWSLETTER **/
+div.newsletter{
+  position: relative;
+  height: auto;
+}
+div.newsletter::before{
+  background-image: url(../img/bg-newsletter.jpg);
+  content: '';
+}
+div.newsletter .contenido{
+  padding: 100px 0;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+div.newsletter .contenido p{
+  font-size: 1.2em;
+  text-transform: lowercase;
+}
+div.newsletter .contenido h3{
+  color: #fe4918;
+  text-transform: uppercase;
+  font-size: 7vw;
+  font-family: 'PT Sans', sans-serif;
+}
+.button.transparente {
+  background-color: transparent;
+  border:2px solid #ffffff;
+}
+.button.transparente:hover {
+  border: 2px solid #fe4918;
+  background-color: #fe4918;
+}
+
+
+/** CUENTA REGRESIVA **/
+div.cuenta-regresiva ul li{
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.6rem;
+  text-align: center;
+}
+@media only screen and (min-width:768px){
   div.cuenta-regresiva ul li{
-    text-transform: uppercase;
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.6rem;
-    text-align: center;
+    width: 25%;
+    float: left;
   }
-  @media only screen and (min-width:768px){
-    div.cuenta-regresiva ul li{
-      width: 25%;
-      float: left;
-    }
-  }
+}
 
 
 
@@ -768,6 +771,84 @@ p.copyright {
   margin:20px 0 0 0;
   text-align: center;
 }
+
+
+/* INTERNAS*/
+/*Registro*/
+form.registro h3{
+  text-align: center;
+  text-transform: uppercase;
+  margin: 20px 0 0 0;
+}
+form.registro label{
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+h4{
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 2px solid #fe4918;
+  padding-bottom: 10px;
+  font-size: 1.2em;
+}
+div.caja{
+  background-color: white;
+  border: 1.8px solid #e1e1e1;
+  padding: 10px;
+  margin: 10px;
+}
+div.campo{
+  padding: 20px;
+}
+
+@media only screen and (min-width:768px){
+  div.campo{
+    float: left;
+    width: 33.3%;
+  }
+}
+div.paquetes .tabla-precio:hover{
+  transform: none;
+  box-shadow: none;
+}
+div.paquetes .tabla-precio input{
+  clear: both;
+  width: 100px;
+  margin: 10px auto 0 auto;
+  display: block;
+}
+
+.contenido-dia{
+  padding: 20px;
+  margin: 10px;
+  /* display: none; */
+}
+@media only screen and (min-width:768px){
+  .contenido-dia>div{
+    float: left;
+    width: 33.3%;
+    padding: 20px;
+  }
+}
+.contenido-dia>div p{
+  text-align: left;
+}
+.contenido-dia>div label{
+  display: block;
+  margin-bottom: 10px;
+}
+.contenido-dia>div input{
+  margin-right: 10px;
+}
+.contenido-dia>div label time {
+  color: #fe4918;
+  font-weight: bold;
+}
+
+
+
+
+
 
 
 
