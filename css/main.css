@@ -605,6 +605,45 @@ textarea {
 
 
 
+/*RESUMEN DE REGISTRO*/
+div.resumen p{
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+div.resumen div.extras{
+  float: left;
+  width: 50%;
+  padding: 30px;
+}
+div.extras div.orden{
+  text-align: left;
+  margin-bottom: 10px;
+}
+div.extras div.orden input{
+  margin: 10px 0 0 0;
+}
+div.resumen div.total{
+  float: right;
+  width: 50%;
+  padding: 30px;
+}
+div.resumen input{
+  display: block;
+  margin: 10px auto ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
