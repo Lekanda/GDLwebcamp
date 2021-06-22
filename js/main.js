@@ -20,7 +20,7 @@
     var calcular = document.getElementById('calcular');
     var errorDiv = document.getElementById('error');
     var btnRegistro = document.getElementById('btnRegistro');
-    var resultado = document.getElementById('lista-productos');
+    var lista_productos = document.getElementById('lista-productos');
 
     // Extras
     var etiquetas = document.getElementById('etiquetas');
@@ -59,7 +59,38 @@
                          (boletoCompleto * 50) +
                          ((cantCamisas * 10) * .93) + // Descuento del 7%
                          (cantEtiquetas * 2);
-        console.log(totalPagar);
+        // console.log(totalPagar);
+
+        var listadoProductos = [];
+
+        // Boletos Evento
+        if (boletosDia >=1) {
+          listadoProductos.push('Pases día: ' + boletosDia);
+        }
+        if (boletos2Dias >=1) {
+          listadoProductos.push('Pases de 2 días: ' + boletos2Dias);
+        }
+        if (boletoCompleto >=1) {
+          listadoProductos.push('Pases completos: ' + boletoCompleto);
+        }
+
+        // Extras: Camiseta, Etiquetas
+        if (cantCamisas >=1) {
+          listadoProductos.push('Camisetas Evento: ' + cantCamisas);
+        }
+        if (cantEtiquetas >=1) {
+          listadoProductos.push('Etiquetas Evento: ' + cantEtiquetas);
+        }
+
+        console.log(listadoProductos);
+
+        lista_productos.innerHTML = '';
+        listadoProductos.forEach(producto => {
+          lista_productos.innerHTML += producto + '<br/>';
+        });
+
+
+
 
       }
 
