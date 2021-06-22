@@ -34,6 +34,13 @@
 
     calcular.addEventListener('click', calcularTotal);
 
+    pase_dia.addEventListener('blur', mostrarDias)
+    pase_dosdias.addEventListener('blur',mostrarDias)
+    pase_completo.addEventListener('blur',mostrarDias)
+
+
+
+
 
     function calcularTotal(e) {
       e.preventDefault();
@@ -101,6 +108,41 @@
       }
 
     }
+
+    function mostrarDias(){
+      let boletosDia = parseInt(pase_dia.value, 10)|| 0,
+          boletos2Dias= parseInt(pase_dosdias.value, 10)|| 0,
+          boletosCompleto= parseInt(pase_completo.value, 10)|| 0;
+
+      let diasElegidos = [];
+
+      //aca uso push el profe pero yo preferi igualar para que los pueda ocultar
+      if (boletosDia > 0) {
+        diasElegidos=["viernes"];
+      }
+      if (boletos2Dias > 0) {
+        diasElegidos=["viernes","sabado"];
+      }
+      if (boletosCompleto > 0) {
+        diasElegidos=["viernes","sabado","domingo"];
+      }
+      console.log(diasElegidos);
+      for(let i=0;i < diasElegidos.length;i++){
+      document.getElementById(diasElegidos[i]).style.display= "block";
+      }
+
+      //Para ocultar si vuelven a 0
+      if(diasElegidos.length<3 ) {
+              document.getElementById("domingo").style.display= "none";
+          }
+      if(diasElegidos.length<2 ) {
+              document.getElementById("sabado").style.display= "none";
+          }
+      if(diasElegidos.length<1 ) {
+              document.getElementById("viernes").style.display= "none";
+          }
+    }
+
 
   });// DOM CONTENT LOADED
 })();
