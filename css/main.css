@@ -895,15 +895,37 @@ div.paquetes .tabla-precio input{
   font-weight: bold;
 }
 
-#error{
-  clear: both;
-  padding: 10px 15px;
-  text-align: center;
-  font-size: 12px;
+#datos-usuario{
+  position: relative;
+}
+#error-nombre{
+  position: absolute;
+  left: 79px;
+  top: 56px;
+  font-size: 11px;
   font-weight: bold;
-  width: 19rem;
-  margin-left: 357px;
   color: red;
+  margin-left: 25px;
+  display: none;
+}
+#error-apellido{
+  position: absolute;
+  left: 429;
+  top: 56px;
+  font-size: 11px;
+  font-weight: bold;
+  color: red;
+  margin-left: 74px;
+  display: none;
+}
+#error-email{
+  position: absolute;
+  left: 743px;
+  top: 56px;
+  font-size: 11px;
+  font-weight: bold;
+  color: red;
+  margin-left: 37px;
   display: none;
 }
 

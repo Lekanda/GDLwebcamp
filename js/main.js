@@ -18,7 +18,9 @@
 
     // Botones y Divs
     var calcular = document.getElementById('calcular');
-    var errorDiv = document.getElementById('error');
+    var errorNombre = document.getElementById('error-nombre');
+    var errorApellido = document.getElementById('error-apellido');
+    var errorEmail = document.getElementById('error-email');
     var btnRegistro = document.getElementById('btnRegistro');
     var lista_productos = document.getElementById('lista-productos');
     var suma = document.getElementById('suma-total');
@@ -150,28 +152,89 @@
 
 
     // VALIDAR CAMPOS
-    function validarCampos(){
+    function validarCampos() {
+      // Atriibuto #id del campo input.
+      const id = this.getAttribute('id');
+      // Sí esta vacio...
       if (this.value == '') {
-        errorDiv.style.display="block";
-        errorDiv.innerHTML = "Estos campos son obligatorios";
-        this.style.border="2.5px solid red";
-        errorDiv.style.border="2.5px solid red";
-        errorDiv.style.color="red";
-        errorDiv.style.fontWeight="bold";
+
+        if (id === 'nombre') {
+          errorNombre.style.display = "block";
+          errorNombre.innerHTML = "* Nombre obligatorio";
+          this.style.border = "2.5px solid red";
+          // errorNombre.style.border="2.5px solid red";
+          errorNombre.style.color = "red";
+          errorApellido.style.display = "none";
+          errorEmail.style.display = "none";
+        }
+        if (id === 'apellido') {
+          errorApellido.style.display = "block";
+          errorApellido.innerHTML = "* El Apellido es obligatorio";
+          this.style.border = "2.5px solid red";
+          errorApellido.style.color = "red";
+          errorNombre.style.display = "none";
+          errorEmail.style.display = "none";
+        }
+        if (id === 'email') {
+          errorEmail.style.display = "block";
+          errorEmail.innerHTML = "* El Email es obligatorio";
+          this.style.border = "2.5px solid red";
+          errorEmail.style.color = "red";
+          errorNombre.style.display = "none";
+          errorApellido.style.display = "none";
+        }
+
+      } else { // Esta con datos
+
+        // Nombre no menos de 3 letras.
+        if (id === 'nombre') {
+          if (this.value.length < 3) {
+            errorNombre.style.display = "block";
+            errorNombre.innerHTML = "* El Nombre 3 letras min.";
+            errorNombre.style.color = "red";
+            // errorApellido.style.display="none";
+            // errorEmail.style.display="none";
+          } else {
+            this.style.border = "2.5px solid green";
+            errorApellido.style.display = "none";
+            errorEmail.style.display = "none";
+            errorNombre.style.display = "none";
+          }
+        }
 
 
-      }else{
-        errorDiv.style.display="none";
-        this.style.border="1.5px solid green";
+        // Apellido no menos de 3 letras.
+        if (id === 'apellido') {
+          if (this.value.length < 3) {
+            errorApellido.style.display = "block";
+            errorApellido.innerHTML = "* El Apellido 3 letras min.";
+            errorApellido.style.color = "red";
+            errorNombre.style.display = "none";
+            errorEmail.style.display = "none";
+          } else {
+            this.style.border = "2.5px solid green";
+            errorApellido.style.display = "none";
+            errorEmail.style.display = "none";
+            errorNombre.style.display = "none";
+          }
+        }
+
+        if (id === 'email') {
+          // console.log('email');
+          if (this.value.indexOf("@") == -1 || this.value.indexOf(".com") == -1) {
+            console.log(this.value);
+            errorEmail.style.display = "block";
+            errorEmail.innerHTML = "* El Email no es valido";
+            this.style.border = '2px solid red';
+          } else {
+            errorEmail.style.border = 'none';
+            this.style.border = '2.5px solid green';
+            // errorEmail.innerHTML = "";
+            errorEmail.style.display = "none";
+          }
+        }
       }
     }
-
-
-
-
-
-
-
 
   });// DOM CONTENT LOADED
 })();
