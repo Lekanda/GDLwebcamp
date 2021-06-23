@@ -39,23 +39,9 @@
     pase_completo.addEventListener('blur',mostrarDias);
 
 
-    nombre.addEventListener('blur', function (){
-      if (this.value == '') {
-        errorDiv.style.display="block";
-        errorDiv.innerHTML = "Tienes que poner un nombre";
-        this.style.border="1px solid red";
-        errorDiv.style.border="1px solid red";
-      }
-    })
-    apellido.addEventListener('blur', function (){
-      if (this.value == '') {
-        errorDiv.style.display="block";
-        errorDiv.innerHTML = "Tienes que poner un Apellido";
-        this.style.border="1px solid red";
-        errorDiv.style.border="1px solid red";
-        errorDiv.classList.add('error-apellido');
-      }
-    })
+    nombre.addEventListener('blur', validarCampos);
+    apellido.addEventListener('blur', validarCampos);
+    email.addEventListener('blur', validarCampos);
 
 
 
@@ -161,6 +147,30 @@
               document.getElementById("viernes").style.display= "none";
           }
     }
+
+
+    // VALIDAR CAMPOS
+    function validarCampos(){
+      if (this.value == '') {
+        errorDiv.style.display="block";
+        errorDiv.innerHTML = "Estos campos son obligatorios";
+        this.style.border="2.5px solid red";
+        errorDiv.style.border="2.5px solid red";
+        errorDiv.style.color="red";
+        errorDiv.style.fontWeight="bold";
+
+
+      }else{
+        errorDiv.style.display="none";
+        this.style.border="1.5px solid green";
+      }
+    }
+
+
+
+
+
+
 
 
   });// DOM CONTENT LOADED
