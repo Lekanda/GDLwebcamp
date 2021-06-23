@@ -897,6 +897,14 @@ div.paquetes .tabla-precio input{
 
 #error{
   clear: both;
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  width: 19rem;
+  margin-left: 357px;
+  color: red;
+  display: none;
 }
 
 
