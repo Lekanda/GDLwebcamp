@@ -895,7 +895,9 @@ div.paquetes .tabla-precio input{
   font-weight: bold;
 }
 
-
+#error{
+  clear: both;
+}
 
 
 

@@ -34,9 +34,28 @@
 
     calcular.addEventListener('click', calcularTotal);
 
-    pase_dia.addEventListener('blur', mostrarDias)
-    pase_dosdias.addEventListener('blur',mostrarDias)
-    pase_completo.addEventListener('blur',mostrarDias)
+    pase_dia.addEventListener('blur', mostrarDias);
+    pase_dosdias.addEventListener('blur',mostrarDias);
+    pase_completo.addEventListener('blur',mostrarDias);
+
+
+    nombre.addEventListener('blur', function (){
+      if (this.value == '') {
+        errorDiv.style.display="block";
+        errorDiv.innerHTML = "Tienes que poner un nombre";
+        this.style.border="1px solid red";
+        errorDiv.style.border="1px solid red";
+      }
+    })
+    apellido.addEventListener('blur', function (){
+      if (this.value == '') {
+        errorDiv.style.display="block";
+        errorDiv.innerHTML = "Tienes que poner un Apellido";
+        this.style.border="1px solid red";
+        errorDiv.style.border="1px solid red";
+        errorDiv.classList.add('error-apellido');
+      }
+    })
 
 
 
