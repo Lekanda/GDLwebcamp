@@ -12,8 +12,12 @@
     }).addTo(map);
 
     L.marker([43.127173, -2.766173]).addTo(map)
-      .bindPopup('Lekanda.Net')
-      .openPopup();
+      // Crea un Pin
+      .bindPopup('Lekanda.Net<br>2021')
+      .openPopup()
+      // Crea una ventana con mensaje al hacer hover en el Pin
+      .bindTooltip('Un Tooltip')
+      .openTooltip();
 
 
 
