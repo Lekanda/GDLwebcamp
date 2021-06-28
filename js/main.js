@@ -6,7 +6,6 @@
   document.addEventListener('DOMContentLoaded', function () {
 
     var map = L.map('mapa').setView([43.127173, -2.766173], 17);
-
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
@@ -18,6 +17,32 @@
       // Crea una ventana con mensaje al hacer hover en el Pin
       .bindTooltip('Un Tooltip')
       .openTooltip();
+
+    var myIcon = L.icon({
+        iconUrl: '../../img/my-icon.png',
+        iconSize: [38, 95],
+        iconAnchor: [22, 94],
+        popupAnchor: [-3, -76],
+        // shadowUrl: '../../img/my-icon-shadow.png',
+        // shadowSize: [68, 95],
+        // shadowAnchor: [22, 94]
+    });
+    L.marker([43.127173, -2.766173], {icon: myIcon}).addTo(map);
+
+
+    L.control.scale().addTo(map);
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
