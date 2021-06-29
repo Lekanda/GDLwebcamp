@@ -419,6 +419,10 @@ textarea {
     font-size: 1.6em;
     margin-right: 10px;
   }
+  div.ocultar{
+    display: none;
+  }
+
   /*Detalle evento*/
   div.detalle-evento{
     margin-top: 20px;

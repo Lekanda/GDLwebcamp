@@ -74,6 +74,9 @@
 
 
 
+
+
+
     calcular.addEventListener('click', calcularTotal);
 
     pase_dia.addEventListener('blur', mostrarDias);
@@ -276,18 +279,30 @@
       }
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   });// DOM CONTENT LOADED
 })();
+
+
+$(function(){
+  // alert('Alerta');
+
+  // Programa de conferencias.
+  $('.programa-evento .info-curso:first').show();
+
+  $('.menu-programa a:first').addClass('activo');
+
+
+  $('.menu-programa a').on('click', function () {
+
+    $('.menu-programa a').removeClass('activo')
+    $(this).addClass('activo');
+
+    $('.ocultar').hide();
+    var enlace = $(this).attr('href');
+    // console.log(enlace);
+    $(enlace).fadeIn(1000);
+    return false;
+  });
+
+
+});
