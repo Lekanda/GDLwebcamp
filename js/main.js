@@ -310,6 +310,18 @@ $(function(){
   $('.resumen-evento li:nth-child(4) p').animateNumber({number:9},1500);
 
 
+
+  // Cuenta Regresiva
+  $('.cuenta-regresiva').countdown('2021/12/10 09:00:00', function (e) {
+    $('#dias').html(e.strftime('%D'));
+    $('#horas').html(e.strftime('%H'));
+    $('#minutos').html(e.strftime('%M'));
+    $('#segundos').html(e.strftime('%S'));
+  });
+
+
+
+
 });
 
 
