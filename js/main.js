@@ -284,9 +284,13 @@
 
 
 $(function(){
-  // alert('Alerta');
 
-  // Programa de conferencias.
+  // Animar letras (Lettering)
+  $('.nombre-sitio').lettering();
+
+
+
+  // Menu/Programa de conferencias.
   $('.programa-evento .info-curso:first').show();
   $('.menu-programa a:first').addClass('activo');
 
@@ -318,8 +322,6 @@ $(function(){
     $('#minutos').html(e.strftime('%M'));
     $('#segundos').html(e.strftime('%S'));
   });
-
-
 
 
 });
