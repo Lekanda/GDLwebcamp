@@ -895,6 +895,16 @@ p.copyright {
 
 
 /* INTERNAS*/
+/* Conferencia.html  */
+body.conferencia .navegacion-principal .activo{
+  border-bottom: 2px solid #fe4918;
+}
+div.galeria a{
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+
 /*Registro*/
 form.registro h3{
   text-align: center;
