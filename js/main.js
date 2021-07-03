@@ -288,6 +288,18 @@ $(function(){
   // Animar letras (Lettering)
   $('.nombre-sitio').lettering();
 
+  // Menu NAV con scroll
+  var windowHeight = $(window).height();
+  var barraAltura = $('.barra').innerHeight();
+
+  console.log(barraAltura);
+  console.log(windowHeight);
+
+  $(window).scroll(function(){
+    var scroll = $(window).scrollTop();
+    // console.log(scroll);
+  })
+
 
 
   // Menu/Programa de conferencias.
@@ -296,14 +308,14 @@ $(function(){
 
   $('.menu-programa a').on('click', function () {
 
-    $('.menu-programa a').removeClass('activo')
-    $(this).addClass('activo');
+      $('.menu-programa a').removeClass('activo')
+      $(this).addClass('activo');
 
-    $('.ocultar').hide();
-    var enlace = $(this).attr('href');
-    // console.log(enlace);
-    $(enlace).fadeIn(1000);
-    return false;
+      $('.ocultar').hide();
+      var enlace = $(this).attr('href');
+      // console.log(enlace);
+      $(enlace).fadeIn(1000);
+      return false;
   });
 
 
@@ -322,6 +334,10 @@ $(function(){
     $('#minutos').html(e.strftime('%M'));
     $('#segundos').html(e.strftime('%S'));
   });
+
+
+
+
 
 
 });
