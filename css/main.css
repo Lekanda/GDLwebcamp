@@ -326,6 +326,13 @@ textarea {
     background-color: #353535;
     padding: 20px 0;
   }
+  .fixed{
+    position:fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
   div.logo{
     width: 80%;
     float: left;
@@ -672,6 +679,7 @@ textarea {
   /*MAPA*/
   div.mapa{
     height: 420px;
+    z-index: 1;
   }
 
 
