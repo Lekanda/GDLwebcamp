@@ -348,6 +348,7 @@ textarea {
   /* Navegacion Principal */
   nav.navegacion-principal{
     display: none;
+    width: 95%;/* Para que no haga efecto feo al pinchar el la hamburguesa*/
   }
   nav.navegacion-principal a{
     font-family: 'Oswald', sans-serif;
@@ -360,6 +361,7 @@ textarea {
     display: block;
     text-align: center;
     margin-bottom:20px ;
+    clear: both;
   }
   nav.navegacion-principal a:hover{
     background-color: #fe4918;

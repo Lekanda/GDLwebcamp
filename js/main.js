@@ -5,20 +5,23 @@
 
   document.addEventListener('DOMContentLoaded', function () {
 
-    var map = L.map('mapa').setView([43.127173, -2.766173], 17);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
 
-    L.marker([43.127173, -2.766173]).addTo(map)
-      // Crea un Pin
-      .bindPopup('Lekanda.Net<br>2021')
-      .openPopup()
-      // Crea una ventana con mensaje al hacer hover en el Pin
-      .bindTooltip('Un Tooltip')
-      .openTooltip();
+    if (document.getElementById('mapa')) {
+      // Aquí colocas todo el código el mapa, no dejes fuera ni una línea
+      var map = L.map('mapa').setView([43.127173, -2.766173], 17);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
 
-    var myIcon = L.icon({
+      L.marker([43.127173, -2.766173]).addTo(map)
+        // Crea un Pin
+        .bindPopup('Lekanda.Net<br>2021')
+        .openPopup()
+        // Crea una ventana con mensaje al hacer hover en el Pin
+        .bindTooltip('Un Tooltip')
+        .openTooltip();
+
+      var myIcon = L.icon({
         iconUrl: '../../img/my-icon.png',
         iconSize: [38, 95],
         iconAnchor: [22, 94],
@@ -26,11 +29,14 @@
         // shadowUrl: '../../img/my-icon-shadow.png',
         // shadowSize: [68, 95],
         // shadowAnchor: [22, 94]
-    });
-    L.marker([43.127173, -2.766173], {icon: myIcon}).addTo(map);
+      });
+      L.marker([43.127173, -2.766173], { icon: myIcon }).addTo(map);
 
 
-    L.control.scale().addTo(map);
+      L.control.scale().addTo(map);
+      }
+
+
 
 
 
@@ -308,7 +314,16 @@ $(function(){
       $('.barra').removeClass('fixed');
       $('body').css({'margin-top': '0px'});
     }
-  })
+  });
+
+
+  // Menu Responsive
+  $('.menu-movil').on('click', function () {
+    $('.navegacion-principal').slideToggle();
+  });
+
+
+
 
 
 
