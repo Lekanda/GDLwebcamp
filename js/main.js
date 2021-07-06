@@ -22,7 +22,7 @@
         .openTooltip();
 
       var myIcon = L.icon({
-        iconUrl: '../../img/my-icon.png',
+        iconUrl: '../../GDLwebcampPHP/img/my-icon.png',
         iconSize: [38, 95],
         iconAnchor: [22, 94],
         popupAnchor: [-3, -76],
