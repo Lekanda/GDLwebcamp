@@ -8,7 +8,7 @@
         require_once('includes/funciones/db_conexion.php');
         $sql = "SELECT * FROM eventos";
         $resultado = $conn->query($sql);
-        echo $resultado;
+        // echo $resultado;
       } catch (\Throwable $th) {
         echo $th->getMessage();
       }
@@ -16,12 +16,14 @@
     ?>
 
     <div class="calendario">
-      <?php
-        $eventos=$resultado->fetch_assoc(); // Trae el primer registro. Para uun arreglo asociativo
-      ?>
 
       <pre>
-        <?php var_dump($eventos) ?>
+        <?php
+          while ($evento=$resultado->fetch_assoc()) {
+            var_dump($evento);
+            
+          }
+        ?>
       </pre>
     </div>
 
