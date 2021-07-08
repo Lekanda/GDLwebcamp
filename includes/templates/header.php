@@ -1,5 +1,8 @@
 <!doctype html>
-<html class="no-js" lang="es">
+<!-- <html class="no-js" lang="es"> -->
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+
+
 
 <head>
   <meta charset="utf-8">
