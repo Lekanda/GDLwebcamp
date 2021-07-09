@@ -24,14 +24,31 @@
       ?>
 
       <div class="calendario">
-        <pre>
             <?php
-              while ($evento=$resultado->fetch_assoc()) {
-                var_dump($evento);
+              $calendario = array();
+              while ($eventos=$resultado->fetch_assoc()) {
+                // Obtiene la fecha del evento
+                $fecha = $eventos['fecha_evento'];
+                $categoria = $eventos['cat_evento'];
 
-              }
-            ?>
-        </pre>
+                $evento = array(
+                  'titulo' => $eventos['nombre_evento'],
+                  'fecha' => $eventos['fecha_evento'],
+                  'hora' => $eventos['hora_evento'],
+                  'categoria' => $eventos['cat_evento'],
+                  'invitado' => $eventos['nombre_invitado'] . " " . $eventos['apellido_invitado']
+                );
+
+                $calendario[$categoria][]= $evento;
+
+                ?>
+            <?php } ?>
+            <pre>
+              <?php var_dump($calendario);?>
+            </pre>
+
+
+
       </div>
 
       <?php
