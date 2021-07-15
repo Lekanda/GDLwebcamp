@@ -96,6 +96,7 @@
 <script src="/GDLwebcampPHP/js/jquery.countdown.min.js"></script>
 <script src="/GDLwebcampPHP/js/jquery.waypoints.min.js"></script>
 <script src="/GDLwebcampPHP/js/jquery.lettering.js"></script>
+<script src="/GDLwebcampPHP/js/jquery.colorbox.js"></script>
 <script src="/GDLwebcampPHP/js/lightbox.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
