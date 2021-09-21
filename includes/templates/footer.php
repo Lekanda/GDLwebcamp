@@ -96,8 +96,19 @@
 <script src="/GDLwebcampPHP/js/jquery.countdown.min.js"></script>
 <script src="/GDLwebcampPHP/js/jquery.waypoints.min.js"></script>
 <script src="/GDLwebcampPHP/js/jquery.lettering.js"></script>
-<script src="/GDLwebcampPHP/js/jquery.colorbox.js"></script>
-<script src="/GDLwebcampPHP/js/lightbox.js"></script>
+
+<?php
+// Nos devuelve el nombre del archivo que esta cargando
+$archivo = basename($_SERVER['PHP_SELF']);
+$pagina = str_replace(".php", "", $archivo);
+if ($pagina == 'invitados') {
+  echo '<script src="/GDLwebcampPHP/js/jquery.colorbox.js"></script>';
+} else if ($pagina == 'conferencia') {
+  echo '<script src="/GDLwebcampPHP/js/lightbox.js"></script>';
+}
+
+?>
+
 
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 <script>
