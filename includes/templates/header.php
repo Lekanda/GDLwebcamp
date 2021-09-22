@@ -25,7 +25,7 @@
     // Nos devuelve el nombre del archivo que esta cargando
     $archivo = basename($_SERVER['PHP_SELF']);
     $pagina = str_replace(".php", "", $archivo);
-    if($pagina == 'invitados'){
+    if($pagina == 'invitados' || $pagina == 'index'){
       echo'<link rel="stylesheet" href="css/colorbox.css">';
     } else if($pagina == 'conferencia'){
       echo'<link rel="stylesheet" href="css/lightbox.css">';
@@ -80,7 +80,7 @@
       <nav class="navegacion-principal clearfix">
         <a href="conferencia.php">Conferencia</a>
         <a href="calendario.php">Calendario</a>
-        <a href="invitados.php">Invitado</a>
+        <a href="invitados.php">Invitados</a>
         <a href="registro.php">Reservas</a>
       </nav>
     </div>
