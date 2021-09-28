@@ -36,16 +36,50 @@
 
 
         <nav class="menu-programa">
-          <?php while ($cat = $resultado->fetch_array(MYSQLI_ASSOC)) {?>
+          <?php while ($cat = $resultado->fetch_array(MYSQLI_ASSOC)) { ?>
             <!-- <pre>
               <?php var_dump($cat) ?>
             </pre> -->
 
             <?php $categoria = $cat['cat_evento'] ?>
-              <a href="<?php echo strtolower($categoria) ?>">
+            <a href="<?php echo strtolower($categoria) ?>">
               <i class="fa <?php echo $cat['icono'] ?>"></i><?php echo $categoria ?></a>
           <?php } ?>
         </nav>
+
+
+        <?php
+        try {
+          require_once('includes/funciones/db_conexion.php');
+          $sql = " SELECT `evento_id`, `nombre_evento`, `fecha_evento`, `hora_evento`, `cat_evento`, `icono`,`nombre_invitado`, `apellido_invitado` ";
+          $sql .= " FROM `eventos` ";
+          $sql .= " INNER JOIN `categoria_evento` ";
+          $sql .= " ON `eventos`.`id_cat_evento` = `categoria_evento`.`id_categoria` ";
+          $sql .= " INNER JOIN `invitados` ";
+          $sql .= " ON `eventos`.`id_inv` = `invitados`.`invitado_id` ";
+          $sql .= " AND eventos.id_cat_evento = 1 ";
+          $sql .= " ORDER BY evento_id LIMIT 2";
+          $resultado = $conn->query($sql);
+          // echo $resultado;
+          // echo $sql;
+        } catch (\Throwable $th) {
+          echo $th->getMessage();
+        }
+        ?>
+
+
+        <?php $eventos=$resultado->fetch_assoc(); ?>
+        <pre>
+              <?php var_dump($eventos) ?>
+        </pre>
+
+
+
+
+
+
+
+        <?php  ?>
 
 
 
