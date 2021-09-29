@@ -42,7 +42,7 @@
             </pre> -->
 
             <?php $categoria = $cat['cat_evento'] ?>
-            <a href="<?php echo strtolower($categoria) ?>">
+            <a href="#<?php echo strtolower($categoria) ?>">
               <i class="fa <?php echo $cat['icono'] ?>"></i><?php echo $categoria ?></a>
           <?php } ?>
         </nav>
@@ -59,27 +59,52 @@
           $sql .= " ON `eventos`.`id_inv` = `invitados`.`invitado_id` ";
           $sql .= " AND eventos.id_cat_evento = 1 ";
           $sql .= " ORDER BY evento_id LIMIT 2";
+          $sql .= " SELECT `evento_id`, `nombre_evento`, `fecha_evento`, `hora_evento`, `cat_evento`, `icono`,`nombre_invitado`, `apellido_invitado` ";
+          $sql .= " FROM `eventos` ";
+          $sql .= " INNER JOIN `categoria_evento` ";
+          $sql .= " ON `eventos`.`id_cat_evento` = `categoria_evento`.`id_categoria` ";
+          $sql .= " INNER JOIN `invitados` ";
+          $sql .= " ON `eventos`.`id_inv` = `invitados`.`invitado_id` ";
+          $sql .= " AND eventos.id_cat_evento = 2 ";
+          $sql .= " ORDER BY evento_id LIMIT 2";
+          $sql .= " SELECT `evento_id`, `nombre_evento`, `fecha_evento`, `hora_evento`, `cat_evento`, `icono`,`nombre_invitado`, `apellido_invitado` ";
+          $sql .= " FROM `eventos` ";
+          $sql .= " INNER JOIN `categoria_evento` ";
+          $sql .= " ON `eventos`.`id_cat_evento` = `categoria_evento`.`id_categoria` ";
+          $sql .= " INNER JOIN `invitados` ";
+          $sql .= " ON `eventos`.`id_inv` = `invitados`.`invitado_id` ";
+          $sql .= " AND eventos.id_cat_evento = 3 ";
+          $sql .= " ORDER BY evento_id LIMIT 2";
           $resultado = $conn->query($sql);
           // echo $resultado;
-          // echo $sql;
+          echo $sql;
         } catch (\Throwable $th) {
           echo $th->getMessage();
         }
         ?>
 
-
-        <?php $eventos=$resultado->fetch_assoc(); ?>
-        <pre>
-              <?php var_dump($eventos) ?>
-        </pre>
+        <?php $conn ?>
 
 
 
 
 
 
-
-        <?php  ?>
+        <div id="seminarios" class="info-curso ocultar clearfix">
+          <div class="detalle-evento">
+            <h3>Diseño UI para moviles</h3>
+            <p><i class="fas fa-clock"></i> 17:00 hrs</p>
+            <p><i class="fas fa-calendar"></i> 11 de Dic</p>
+            <p><i class="fas fa-user"></i> Luis Perez</p>
+          </div>
+          <div class="detalle-evento">
+            <h3>Aprende a programar en una mañana</h3>
+            <p><i class="fas fa-clock"></i> 10:00</p>
+            <p><i class="fas fa-calendar"></i> 11 de Dic</p>
+            <p><i class="fas fa-user"></i> Luis Perez</p>
+          </div>
+          <a href="#" class="button float-right">Ver Todos</a>
+        </div>
 
 
 
@@ -116,30 +141,6 @@
           </div>
           <a href="#" class="button float-right">Ver Todos</a>
         </div>
-
-
-
-        <div id="seminarios" class="info-curso ocultar clearfix">
-          <div class="detalle-evento">
-            <h3>Diseño UI para moviles</h3>
-            <p><i class="fas fa-clock"></i> 17:00 hrs</p>
-            <p><i class="fas fa-calendar"></i> 11 de Dic</p>
-            <p><i class="fas fa-user"></i> Luis Perez</p>
-          </div>
-          <div class="detalle-evento">
-            <h3>Aprende a programar en una mañana</h3>
-            <p><i class="fas fa-clock"></i> 10:00</p>
-            <p><i class="fas fa-calendar"></i> 11 de Dic</p>
-            <p><i class="fas fa-user"></i> Luis Perez</p>
-          </div>
-          <a href="#" class="button float-right">Ver Todos</a>
-        </div>
-
-
-
-
-
-
       </div>
     </div>
   </div>
