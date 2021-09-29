@@ -1,5 +1,5 @@
 <?php include_once '../GDLwebcampPHP/includes/templates/header.php' ?>
-
+<!-- Crear tablas en MySQL -->
 
 <section class="seccion contenedor">
   <h2>Registro de Usuarios</h2>
