@@ -916,6 +916,10 @@ div.galeria a{
 
 
 /*Registro*/
+input[disabled].button {
+  opacity: .5;
+  /* background-color: #fe4918; */
+}
 form.registro h3{
   text-align: center;
   text-transform: uppercase;

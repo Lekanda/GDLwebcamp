@@ -63,7 +63,7 @@
     var camisas = document.getElementById('camisa-evento');
 
 
-
+    btnRegistro.disabled = true;
 
 
 
@@ -148,6 +148,9 @@
 
           // Total a pagar
           suma.innerHTML = totalPagar.toFixed(2) + '€';
+
+          btnRegistro.disabled = false;
+          document.getElementById('total_pedido').value = totalPagar;
 
         }
 
