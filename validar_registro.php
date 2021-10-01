@@ -17,14 +17,14 @@
       $etiquetas = $_POST['pedido_etiquetas'];
       include_once '../GDLwebcampPHP/includes/funciones/funciones.php';
       $pedido = productos_json($boletos,$camisas,$etiquetas);
-      // echo "<pre>";
-      //   var_dump($pedido);
-      // echo "</pre>";
+      echo "<pre>";
+        var_dump($pedido);
+      echo "</pre>";
 
   ?>
-    <!-- <pre>
+    <pre>
       <?php var_dump($boletos); ?>
-    </pre> -->
+    </pre>
   <?php endif; ?>
 
 </section>

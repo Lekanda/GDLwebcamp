@@ -13,14 +13,15 @@ function productos_json(&$boletos, &$camisas = 0, &$etiquetas = 0){
         }
     endforeach;
 
+    $camisas = (int) $camisas;
+    if ($camisas > 0) {
+      $json['camisas'] = $camisas;
+    }
+    $etiquetas = (int) $etiquetas;
+    if ($etiquetas > 0) {
+      $json['etiquetas'] = $etiquetas;
+    }
+
     return json_encode($json);
-
-
-
-
-    echo "<pre>";
-      var_dump($total_boletos);
-    echo "</pre>";
-
 
 }
