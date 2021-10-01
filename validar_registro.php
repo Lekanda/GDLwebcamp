@@ -31,15 +31,16 @@
 
       $stmt = $conn->prepare("INSERT INTO registrados (nombre_registrado,apellido_registrado,email_registrado,fecha_registro,pases_articulos,talleres_registrados,regalo,total_pagado) VALUES (?,?,?,?,?,?,?,?) ");
       $stmt->bind_param("ssssssis", $nombre,$apellido,$email,$fecha,$pedido,$registro,$regalo,$total);
-
-
+      $stmt->execute();
+      $stmt->close();
+      $conn->close();
     } catch (\Throwable $th) {
       echo $th->getMessage();
     }
 
 
   ?>
-    
+
   <?php endif; ?>
 
 </section>
