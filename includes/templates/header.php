@@ -35,6 +35,7 @@
 
 
   <meta name="theme-color" content="#fafafa">
+
   <script id="mcjs">
     ! function(c, h, i, m, p) {
       m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p)
@@ -66,6 +67,7 @@
     var ml_account = ml('accounts', '3478475', 'y6e8l0z6o7', 'load');
   </script>
   <!-- End MailerLite Universal -->
+  <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/18c3f637667a4a88d98e0463d/587909079aafe8d1c2e88b938.js");</script>
 </head>
 
 <body class="<?php echo $pagina ?>">
