@@ -22,19 +22,50 @@
   <link rel="stylesheet" href="css/main.css">
 
   <?php
-    // Nos devuelve el nombre del archivo que esta cargando
-    $archivo = basename($_SERVER['PHP_SELF']);
-    $pagina = str_replace(".php", "", $archivo);
-    if($pagina == 'invitados' || $pagina == 'index'){
-      echo'<link rel="stylesheet" href="css/colorbox.css">';
-    } else if($pagina == 'conferencia'){
-      echo'<link rel="stylesheet" href="css/lightbox.css">';
-    }
+  // Nos devuelve el nombre del archivo que esta cargando
+  $archivo = basename($_SERVER['PHP_SELF']);
+  $pagina = str_replace(".php", "", $archivo);
+  if ($pagina == 'invitados' || $pagina == 'index') {
+    echo '<link rel="stylesheet" href="css/colorbox.css">';
+  } else if ($pagina == 'conferencia') {
+    echo '<link rel="stylesheet" href="css/lightbox.css">';
+  }
 
-	?>
+  ?>
 
 
   <meta name="theme-color" content="#fafafa">
+  <script id="mcjs">
+    ! function(c, h, i, m, p) {
+      m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p)
+    }(document, "script", "https://chimpstatic.com/mcjs-connected/js/users/18c3f637667a4a88d98e0463d/587909079aafe8d1c2e88b938.js");
+  </script>
+  <!-- MailerLite Universal -->
+  <script>
+    (function(m, a, i, l, e, r) {
+      m['MailerLiteObject'] = e;
+
+      function f() {
+        var c = {
+          a: arguments,
+          q: []
+        };
+        var r = this.push(c);
+        return "number" != typeof r ? r : f.bind(c.q);
+      }
+      f.q = f.q || [];
+      m[e] = m[e] || f.bind(f.q);
+      m[e].q = m[e].q || f.q;
+      r = a.createElement(i);
+      var _ = a.getElementsByTagName(i)[0];
+      r.async = 1;
+      r.src = l + '?v' + (~~(new Date().getTime() / 1000000));
+      _.parentNode.insertBefore(r, _);
+    })(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
+
+    var ml_account = ml('accounts', '3478475', 'y6e8l0z6o7', 'load');
+  </script>
+  <!-- End MailerLite Universal -->
 </head>
 
 <body class="<?php echo $pagina ?>">
@@ -67,7 +98,7 @@
       <div class="logo">
         <a href="/GDLwebcampPHP/">
           <img src="/GDLwebcampPHP/img/logo.svg" alt="Logo de la barra de Navegacion">
-      </a>
+        </a>
       </div>
       <div class="menu-movil">
         <span></span>
